@@ -15,6 +15,4 @@ server.on("listening", () => {
   console.log("Listening on " + bind);
 });
 
-db.sequelize.sync().then(() => {
-  server.listen(port);
-});
+server.listen(port);
