@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "nexmerbp",
+    "password": "E2O-TiLgWOLFnqQdndot9zUIpVxGLniz",
+    "database": "nexmerbp",
+    "host": "rogue.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "nexmerbp",
+    "password": "E2O-TiLgWOLFnqQdndot9zUIpVxGLniz",
+    "database": "nexmerbp",
+    "host": "rogue.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "nexmerbp",
+    "password": "E2O-TiLgWOLFnqQdndot9zUIpVxGLniz",
+    "database": "nexmerbp",
+    "host": "rogue.db.elephantsql.com",
+    "dialect": "postgres"
+  }
+}

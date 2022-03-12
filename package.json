@@ -1,0 +1,34 @@
+{
+  "name": "crud-app",
+  "version": "1.0.0",
+  "description": "Basic CRUD Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jafman/CRUD-App.git"
+  },
+  "keywords": [
+    "Node.js",
+    "Express",
+    "Postgre"
+  ],
+  "author": "Jafar Kamar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jafman/CRUD-App/issues"
+  },
+  "homepage": "https://github.com/jafman/CRUD-App#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.17.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.4.1"
+  }
+}
