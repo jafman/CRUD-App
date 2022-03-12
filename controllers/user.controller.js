@@ -21,11 +21,11 @@ exports.create = (req, res) => {
 };
 
 exports.findOne = (req, res) => {
-  const email = req.params.email;
-
+  const { email, password } = req.body;
   User.findOne({
     where: {
       email: email,
+      password: password,
     },
   })
     .then((data) => {

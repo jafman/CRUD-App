@@ -1,10 +1,11 @@
 module.exports = (app) => {
   const userController = require("../controllers/user.controller");
+  const userMiddleware = require("../middlewares/user.middleware");
   let router = require("express").Router();
   // Create a new User
-  router.post("/", userController.create);
+  router.post("/", userMiddleware.validateNewUser, userController.create);
   // Get a User by email
-  router.get("/:email", userController.findOne);
+  router.get("/", userMiddleware.validateCredentials, userController.findOne);
   // Update a User by id
   router.patch("/:id", userController.update);
   // Delete a User by id
