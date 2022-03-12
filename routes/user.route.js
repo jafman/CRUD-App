@@ -6,7 +6,7 @@ module.exports = (app) => {
   // Get a User by email
   router.get("/:email", userController.findOne);
   // Update a User by id
-  router.put("/:id", userController.update);
+  router.patch("/:id", userController.update);
   // Delete a User by id
   router.delete("/:id", userController.delete);
   app.use("/api/user", router);

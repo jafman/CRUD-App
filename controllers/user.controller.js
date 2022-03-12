@@ -11,7 +11,7 @@ exports.create = (req, res) => {
 
   User.create(user)
     .then((data) => {
-      res.send(data);
+      res.status(201).send(data);
     })
     .catch((err) => {
       res.status(500).send({
@@ -29,7 +29,7 @@ exports.findOne = (req, res) => {
     },
   })
     .then((data) => {
-      res.send(data);
+      res.status(200).send(data);
     })
     .catch((err) => {
       res.status(500).send({
@@ -48,7 +48,7 @@ exports.update = (req, res) => {
   })
     .then((num) => {
       if (num == 1) {
-        res.send({
+        res.status(200).send({
           message: "User was updated successfully.",
         });
       } else {
@@ -78,7 +78,7 @@ exports.delete = (req, res) => {
           message: "User was deleted successfully!",
         });
       } else {
-        res.send({
+        res.status(200).send({
           message: `Cannot delete User with id=${id}. Maybe User was not found!`,
         });
       }
