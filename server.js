@@ -7,6 +7,7 @@ const port = process.env.PORT || 3000;
 //app.set('port', port);
 
 const server = http.createServer(app);
+require("./routes/user.route")(app);
 
 server.on("listening", () => {
   const address = server.address();
