@@ -1,14 +1,23 @@
 const validateRequired = (name) => {
+  if (name === undefined) {
+    return false;
+  }
   return name.trim().length > 0;
 };
 
 const validatePassword = (password) => {
+  if (password === undefined) {
+    return false;
+  }
   var regEx =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   return regEx.test(password);
 };
 
 const validateEmail = (email) => {
+  if (email === undefined) {
+    return false;
+  }
   var regEx =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return regEx.test(email);

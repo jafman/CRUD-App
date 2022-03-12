@@ -4,7 +4,7 @@ module.exports = (app) => {
   let router = require("express").Router();
   // Create a new User
   router.post("/", userMiddleware.validateNewUser, userController.create);
-  // Get a User by email
+  // Get a User by email and password
   router.get("/", userMiddleware.validateCredentials, userController.findOne);
   // Update a User by id
   router.patch("/:id", userController.update);
